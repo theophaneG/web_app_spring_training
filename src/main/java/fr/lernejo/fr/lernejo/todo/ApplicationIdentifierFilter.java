@@ -1,4 +1,4 @@
-package fr.lernejo.fr.lernejo.todo.fr.lernejo.todo;
+package fr.lernejo.fr.lernejo.todo;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,10 +15,12 @@ import javax.servlet.http.HttpServletResponse;
 public class ApplicationIdentifierFilter implements javax.servlet.Filter{
     final String out;
 
-    public ApplicationIdentifierFilter(String out) {
+    public ApplicationIdentifierFilter() {
         this.out = UUID.randomUUID().toString();
     }
 
+
+    //comment
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain)
         throws IOException, ServletException {
